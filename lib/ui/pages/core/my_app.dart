@@ -2,7 +2,7 @@ import 'package:demo/blocs/app_cubit.dart';
 import 'package:demo/commons/app_theme.dart';
 import 'package:demo/configs/global_data.dart';
 import 'package:demo/locator/locator.dart';
-import 'package:demo/ui/pages/home/home_page.dart';
+import 'package:demo/ui/pages/splash/splash_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -34,7 +34,7 @@ class _MyAppState extends State<MyApp> {
             primaryColor: Colors.blue,
             visualDensity: VisualDensity.adaptivePlatformDensity,
           ),
-          home: const HomePage(),
+          home: const SplashPage(),
         ),
       ),
     );
