@@ -1,5 +1,4 @@
 import 'package:demo/blocs/app_cubit.dart';
-import 'package:demo/commons/app_theme.dart';
 import 'package:demo/configs/global_data.dart';
 import 'package:demo/locator/locator.dart';
 import 'package:demo/ui/pages/splash/splash_page.dart';
@@ -18,25 +17,21 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    final appTheme = AppTheme.dark();
     return BlocProvider(
       create: (context) => getIt<AppCubit>(),
-      child: InheritedAppTheme(
-        theme: appTheme,
-        child: MaterialApp(
-          title: 'Demo App',
-          navigatorKey: GlobalData.instance.navigatorKey,
-          debugShowCheckedModeBanner: false,
-          theme: ThemeData(
-            splashColor: Colors.transparent,
-            highlightColor: Colors.transparent,
-            primarySwatch: Colors.blue,
-            primaryColor: Colors.blue,
-            visualDensity: VisualDensity.adaptivePlatformDensity,
-          ),
-          home: const SplashPage(),
+      child:  MaterialApp(
+        title: 'Demo App',
+        navigatorKey: GlobalData.instance.navigatorKey,
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          splashColor: Colors.transparent,
+          highlightColor: Colors.transparent,
+          primarySwatch: Colors.blue,
+          primaryColor: Colors.blue,
+          visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
-      ),
+        home: const SplashPage(),
+      )
     );
   }
 
