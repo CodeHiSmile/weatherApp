@@ -15,6 +15,6 @@
 - Nguồn API: https://openweathermap.org/api 
 - Hình ảnh design app: 
 
-![alt text](https://github.com/CodeHiSmile/weatherApp/tree/main/assets/images/splash.IPEG?raw=true)
-![alt text](https://github.com/CodeHiSmile/weatherApp/tree/main/assets/images/home.IPEG?raw=true)
-![alt text](https://github.com/CodeHiSmile/weatherApp/tree/main/assets/images/detail.IPEG?raw=true)
+![alt text](https://github.com/CodeHiSmile/weatherApp/tree/main/assets/images/splash.JPEG?raw=true)
+![alt text](https://github.com/CodeHiSmile/weatherApp/tree/main/assets/images/home.JPEG?raw=true)
+![alt text](https://github.com/CodeHiSmile/weatherApp/tree/main/assets/images/detail.JPEG?raw=true)
