@@ -6,6 +6,7 @@ class HomeState extends Equatable {
   final WeatherByDayEntity? weatherByDay;
   final int? indexSelected;
   final bool showSearch;
+  final String? addressSearch;
 
   HomeState({
     this.loadStatus,
@@ -13,6 +14,7 @@ class HomeState extends Equatable {
     this.weatherCurrent,
     this.indexSelected = 0,
     this.showSearch = false,
+    this.addressSearch,
   });
 
   HomeState copyWith({
@@ -21,6 +23,7 @@ class HomeState extends Equatable {
     WeatherByDayEntity? weatherByDay,
     int? indexSelected,
     bool? showSearch,
+    String? addressSearch,
   }) {
     return HomeState(
       loadStatus: loadStatus ?? this.loadStatus,
@@ -28,6 +31,7 @@ class HomeState extends Equatable {
       weatherByDay: weatherByDay ?? this.weatherByDay,
       indexSelected: indexSelected ?? this.indexSelected,
       showSearch: showSearch ?? this.showSearch,
+      addressSearch: addressSearch ?? this.addressSearch,
     );
   }
 
@@ -38,5 +42,6 @@ class HomeState extends Equatable {
         weatherCurrent,
         indexSelected,
         showSearch,
+        addressSearch,
       ];
 }

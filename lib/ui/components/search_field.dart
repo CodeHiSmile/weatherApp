@@ -52,6 +52,7 @@ class SearchFieldComponent extends StatelessWidget {
                 ),
                 textAlign: TextAlign.start,
                 textAlignVertical: TextAlignVertical.center,
+                autofocus: true,
                 onFieldSubmitted: (value) {
                   onSearch(value);
                 },
