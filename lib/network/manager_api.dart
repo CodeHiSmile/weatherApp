@@ -1,11 +1,8 @@
 import 'package:demo/configs/app_config.dart';
 import 'package:dio/dio.dart';
-import 'package:injectable/injectable.dart';
-
 import 'api_client.dart';
 import 'api_interceptors.dart';
 
-@singleton
 class ManagerApi {
   late final Dio dio;
   late final ApiClient apiClient;

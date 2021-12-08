@@ -4,11 +4,9 @@ import 'package:demo/models/entities/weather_by_day_entity.dart';
 import 'package:demo/models/enums/load_status.dart';
 import 'package:demo/services/weather_repository.dart';
 import 'package:equatable/equatable.dart';
-import 'package:injectable/injectable.dart';
 
 part 'home_state.dart';
 
-@injectable
 class HomeCubit extends Cubit<HomeState> {
   IWeatherRepository? repository;
 

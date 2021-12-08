@@ -1,6 +1,5 @@
 import 'package:demo/blocs/app_cubit.dart';
 import 'package:demo/configs/global_data.dart';
-import 'package:demo/locator/locator.dart';
 import 'package:demo/network/api_client.dart';
 import 'package:demo/network/manager_api.dart';
 import 'package:demo/services/weather_repository.dart';
@@ -36,7 +35,7 @@ class _MyAppState extends State<MyApp> {
       child: MultiBlocProvider(
           providers: [
             BlocProvider(
-              create: (context) => getIt<AppCubit>(),
+              create: (context) => context.read<AppCubit>(),
             )
           ],
           child: MaterialApp(
