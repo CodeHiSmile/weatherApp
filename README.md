@@ -1,3 +1,4 @@
+## headings
 # Nội dung: 
 - Nhóm 21: Đề tài: Xây dựng App Dự báo thời tiết
 - Các chức năng cơ bản:
@@ -12,3 +13,4 @@
 
 - Link design: https://www.uplabs.com/posts/weather-app-freebie
 - Nguồn API: https://openweathermap.org/api 
+- Hình ảnh design app: 
