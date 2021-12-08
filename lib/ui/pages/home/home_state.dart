@@ -5,12 +5,14 @@ class HomeState extends Equatable {
   final InfoWeatherEntity? weatherCurrent;
   final WeatherByDayEntity? weatherByDay;
   final int? indexSelected;
+  final bool showSearch;
 
   HomeState({
     this.loadStatus,
     this.weatherByDay,
     this.weatherCurrent,
     this.indexSelected = 0,
+    this.showSearch = false,
   });
 
   HomeState copyWith({
@@ -18,12 +20,14 @@ class HomeState extends Equatable {
     InfoWeatherEntity? weatherCurrent,
     WeatherByDayEntity? weatherByDay,
     int? indexSelected,
+    bool? showSearch,
   }) {
     return HomeState(
       loadStatus: loadStatus ?? this.loadStatus,
       weatherCurrent: weatherCurrent ?? this.weatherCurrent,
       weatherByDay: weatherByDay ?? this.weatherByDay,
       indexSelected: indexSelected ?? this.indexSelected,
+      showSearch: showSearch ?? this.showSearch,
     );
   }
 
@@ -33,5 +37,6 @@ class HomeState extends Equatable {
         weatherByDay,
         weatherCurrent,
         indexSelected,
+        showSearch,
       ];
 }

@@ -14,10 +14,12 @@ class HomeCubit extends Cubit<HomeState> {
 
   HomeCubit({this.repository}) : super(HomeState(loadStatus: LoadStatus.initial));
 
-  void getWeather() async {
+  void getWeather({String address = 'Hanoi'}) async {
     emit(state.copyWith(loadStatus: LoadStatus.loading));
     try {
-      final weatherCurrent = await repository?.getWeatherByCityName(address: 'HaNoi');
+      final weatherCurrent = await repository?.getWeatherByCityName(
+        address: address,
+      );
 
       final weatherByDay = await repository?.getWeatherByHour(
         lat: "${weatherCurrent?.coord?.lat ?? 0}",
@@ -36,4 +38,8 @@ class HomeCubit extends Cubit<HomeState> {
   }
 
   void changeIndex(int index) => emit(state.copyWith(indexSelected: index));
+
+  void showSearch(bool value) => emit(
+        state.copyWith(showSearch: value),
+      );
 }
