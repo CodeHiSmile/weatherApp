@@ -12,7 +12,7 @@ class MinutelyEntity {
   @JsonKey()
   int? dt;
   @JsonKey()
-  int? precipitation;
+  double? precipitation;
 
   factory MinutelyEntity.fromJson(Map<String, dynamic> json) => _$MinutelyEntityFromJson(json);
 

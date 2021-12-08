@@ -1,5 +1,6 @@
 import 'package:demo/models/entities/weather_entity.dart';
 import 'package:json_annotation/json_annotation.dart';
+import '../../helper/datetime_formatter.dart';
 
 part 'current_entity.g.dart';
 
@@ -27,37 +28,45 @@ class CurrentEntity {
   @JsonKey()
   int? dt;
   @JsonKey()
-  int? sunrise;
+  double? sunrise;
   @JsonKey()
-  int? sunset;
+  double? sunset;
   @JsonKey()
   double? temp;
-  @JsonKey()
+  @JsonKey(name: 'feels_like')
   double? feelsLike;
   @JsonKey()
-  int? pressure;
+  double? pressure;
   @JsonKey()
-  int? humidity;
+  double? humidity;
   @JsonKey()
   double? dewPoint;
   @JsonKey()
   double? uvi;
   @JsonKey()
-  int? clouds;
+  double? clouds;
   @JsonKey()
-  int? visibility;
+  double? visibility;
   @JsonKey()
   double? windSpeed;
   @JsonKey()
-  int? windDeg;
+  double? windDeg;
   @JsonKey()
   double? windGust;
   @JsonKey()
   List<WeatherEntity>? weather;
   @JsonKey()
-  int? pop;
+  double? pop;
 
   factory CurrentEntity.fromJson(Map<String, dynamic> json) => _$CurrentEntityFromJson(json);
 
   Map<String, dynamic> toJson() => _$CurrentEntityToJson(this);
+
+  String get dateTime {
+    return DateTime.fromMillisecondsSinceEpoch(dt! * 1000).toStringWith(DateTimeFormater.dateTimeHour);
+  }
+
+  String get hour {
+    return DateTime.fromMillisecondsSinceEpoch(dt! * 1000).toStringWith(DateTimeFormater.dateTime);
+  }
 }

@@ -22,7 +22,7 @@ class MainEntity {
   @JsonKey()
   double? tempMax;
   @JsonKey()
-  int? pressure;
+  double? pressure;
   @JsonKey()
   double? humidity;
 

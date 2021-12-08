@@ -57,4 +57,8 @@ class InfoWeatherEntity {
   factory InfoWeatherEntity.fromJson(Map<String, dynamic> json) => _$InfoWeatherEntityFromJson(json);
 
   Map<String, dynamic> toJson(InfoWeatherEntity instance) => _$InfoWeatherEntityToJson(this);
+
+  String get dateTime {
+    return '';
+  }
 }

@@ -19,9 +19,9 @@ class SystemEntity {
   @JsonKey()
   String? country;
   @JsonKey()
-  int? sunrise;
+  double? sunrise;
   @JsonKey()
-  int? sunset;
+  double? sunset;
 
   factory SystemEntity.fromJson(Map<String, dynamic> json) => _$SystemEntityFromJson(json);
 

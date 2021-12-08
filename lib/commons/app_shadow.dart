@@ -27,4 +27,20 @@ class AppShadow {
       offset: Offset(0, -5),
     ),
   ];
+
+  static final iconCloseShadow = [
+    const BoxShadow(
+      color: Colors.white,
+      blurRadius: 50,
+      offset: Offset(0, 3),
+    ),
+  ];
+
+  static final cardDetailShadow = [
+    const BoxShadow(
+      color: AppColors.whiteLight,
+      blurRadius: 50,
+      offset: Offset(0, 3),
+    ),
+  ];
 }
